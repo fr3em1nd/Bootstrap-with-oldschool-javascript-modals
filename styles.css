@@ -1,0 +1,21 @@
+.logo-section .logo {
+    width: 250px;
+    margin-right: 8px; /* or the desired space between the logo and the text */
+}
+
+.text-beside-logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #05296A;
+}
+
+.check-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding-left: 0; /* Removes default padding */
+}
+
+.check-list li::before {
+    content: "✔"; /* Unicode check mark */
+    color: green; /* Check mark color */
+    margin-right: 8px; /* Space between the check mark and the text */
+}
