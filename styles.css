@@ -25,6 +25,12 @@ body, html {
     margin-right: 8px;
 }
 
+.reviewer-image {
+    width: 50px;
+    border-radius: 50%; /* Makes the image a circle */
+    border: 2px solid black; /* Adds a border */
+}
+
 .col-md-12.align-items-left {
     background: linear-gradient(90deg, #05296A 0%, #116DAB 50%, #05296A 100%);
     padding: 20px;
