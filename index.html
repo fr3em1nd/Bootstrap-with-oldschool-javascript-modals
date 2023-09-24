@@ -1,105 +1,304 @@
 <html>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="styles.css">
-    </head>
-    <body class="container-fluid">
-        <div class=" mt-5">
-    <!-- Header Section -->
- 
-    <div class="d-flex justify-content-between align-items-center ">
-        <div class="d-flex align-items-center logo-section ml-lg-5">
-            <!-- SVG logo sourced from images folder -->
-            <img src="images/md.svg" alt="Logo" class="logo">
-            <div class="text-beside-logo mt-2">Find the right lawyer now</div>
-        </div>
-        <div class="right mr-lg-5">
-            <ul class="check-list">
-                <li>No fee to present your case</li>
-                <li>Choose from lawyers in your area</li>
-                <li>A 100% confidential service</li>
-                
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-            </ul>
+<body class="container-fluid no-margin-body">
+    <div class=" mt-5">
+        <!-- Header Section -->
 
-        </div>
-       
-    </div>
-    
- 
-    <div class="col-md-12 align-items-left">
-
-        <h1 class="headerText">Find a Lawyers for your Legal Issue</h1>
-        <h2 class="subHeaderText">Fast, Free and Confidential</h2>
-       
-
-    
-    <hr class="my-4">
-
-    <!-- Main Content -->
-    <div class="row">
-        <!-- Left md-6: Form with 2 input boxes -->
-        <div class="col-md-6">
-            <form>
-                <!-- Input 1 -->
-<div class="input-container" style="position: relative;">
-    <span class="input-number">1</span>
-    <input type="text" class="form-control">
-</div>
-
-<!-- Dropdown Select -->
-<div class="input-container" style="position: relative; margin-top: 10px;">
-    <span class="input-number">2</span>
-    <select class="form-control">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-        <!-- ... add more options as needed ... -->
-    </select>
-</div>
-            </form>
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="d-flex align-items-center logo-section ml-lg-5">
+                <!-- SVG logo sourced from images folder -->
+                <img src="images/md.svg" alt="Logo" class="logo">
+                <div class="text-beside-logo mt-2">Find the right lawyer now</div>
+            </div>
+            <div class="right mr-lg-5">
+                <ul class="check-list">
+                    <li>No fee to present your case</li>
+                    <li>Choose from lawyers in your area</li>
+                    <li>A 100% confidential service</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Right md-6: 3 reviews with pictures and stars -->
-        <div class="col-md-6">
-            <!-- Review 1 -->
-<div class="d-flex align-items-center mb-3">
-    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Reviewer 1" class="reviewer-image mr-2">
-    <div class="d-flex flex-column">
-        <div>★★★★☆</div>
-        <div>Review 1 text...</div>
-    </div>
-</div>
+        <div class="col-md-12 align-items-left">
 
-            <!-- Review 2 -->
-        >
-<div class="d-flex align-items-center mb-3">
-    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Reviewer 1" class="reviewer-image mr-2">
-    <div class="d-flex flex-column">
-        <div>★★★★☆</div>
-        <div>Review 1 text...</div>
-    </div>
-</div>
+            <div class="row">
+                <div class="col-md-12 pl-sm-5 pr-sm-5">
+                    <p class="headerText">Find a Lawyers for your Legal Issue</p>
+                    <p class="subHeaderText">Fast, Free and Confidential</p>
+                </div>
+                <!-- Main Content -->
+            </div>
+            <div class="row">
+                <!-- Left md-6: Form with 2 input boxes -->
+                <div class="col-md-6 pl-sm-5 pr-sm-5">
+                    <form>
+                        <div class="input-container" style="position: relative;">
+                            <p class="formHeaders">Enter Zip Code or City:</p>
+                        </div>
+                        <div class="input-container">
+                            <span class="input-number">1</span>
+                            <input type="text" class="form-control" id="zipcodeInput"
+                                placeholder="Does not have to where you live">
+                            <div id="suggestionContainer">
+                                Nowheresville, XX <span class="suggested-zip">00000</span>
+                            </div>
+                        </div>
 
-            <!-- Review 3 --> 
-<div class="d-flex align-items-center mb-3">
-    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Reviewer 1" class="reviewer-image mr-2">
-    <div class="d-flex flex-column">
-        <div>★★★★☆</div>
-        <div>Review 1 text...</div>
-    </div>
-</div>
+                        <div class="input-container" style="position: relative;">
+                            <p class="formHeaders formSubHeader">Choose a category:</p>
+                        </div>
+                        <div class="input-container" style="position: relative; margin-top: 10px;">
+                            <span class="input-number">2</span>
+                            <select class="form-control" id="selectOption">
+                                <option value="" disabled selected class="placeholder">Select an option</option>
+                                <option value="option1">Family</option>
+                                <option value="option1">Criminal Defense</option>
+                                <option value="option1">Business</option>
+                                <option value="option1">Personal Injury</option>
+                                <option value="option1">Bankruptcy & Finances</option>
+                                <option value="option1">Product & Services</option>
+                                <option value="option1">Employment</option>
+                                <option value="option1">Real Estate</option>
+                                <option value="option1">Immigration</option>
+                                <option value="option1">Wills, Trusts & Estates</option>
+                                <option value="option1">Government</option>
+                                <option value="option1">Intellectual Property</option>
 
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 col-md-3 pl-sm-5 pr-sm-5 pr-5 reviews">
+                    <h4 class="review-title">Clients review LegalMatch lawyers</h4>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex flex-column align-items-center text-center reviewers">
+                            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Reviewer 1"
+                                class="reviewer-image mb-2">
+                            <span class="reviewer-name">Mitchell M.</span>
+                            <span class="reviewer-loc">Cherry Hill, NJ</span>
+
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="review-header-text">Family Law <span>★★★★☆</span></div>
+                            <div class="review-text">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                                consectetur, adipisci velit...</div>
+                            <div class="review-text-footer reviewsBtn">Read Review <span></span></div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="d-flex align-items-center mb-3">
+
+                        <div class="d-flex flex-column align-items-center text-center reviewers">
+                            <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Reviewer 1"
+                                class="reviewer-image mb-2">
+                            <span class="reviewer-name">Joel C.</span>
+                            <span class="reviewer-loc">Little Rock, AK</span>
+
+                        </div>
+
+                        <div class="d-flex flex-column">
+                            <div class="review-header-text">Job & Employment Law<span>★★★★★</span></div>
+                            <div class="review-text">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                                consectetur, adipisci velit...</div>
+                            <div class="review-text-footer reviewsBtn">Read Review <span></span></div>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <div class="d-flex align-items-center mb-3">
+
+                        <div class="d-flex flex-column align-items-center text-center reviewers">
+                            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Reviewer 1"
+                                class="reviewer-image mb-2">
+                            <span class="reviewer-name">Brigada R.</span>
+                            <span class="reviewer-loc">Dallas, TX</span>
+
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="review-header-text">Family Law <span>★★★★☆</span></div>
+                            <div class="review-text">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                                consectetur, adipisci velit...</div>
+                            <div class="review-text-footer reviewsBtn">Read Review <span></span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
+    <footer class="container-fluid text-white py-3">
+        <div class="row justify-content-between">
+            <div class="col-md-3">
+                <img src="images/md.svg" alt="Logo" class="logo">
+                <div class="text-beside-logo mt-2">Find the right lawyer now</div>
+            </div>
+            <div class="col-md-3 text-center">
+                <p class="footer-texts-agreement">User Agreement &#8226; Privacy Policy &#8226; Site Map</p>
+            </div>
+            <div class="col-md-3 text-right">
+                <div>
+                    <img src="images/truste.png" alt="trustee" class="trustee mr-2">
+                </div>
+                <div>
+                    <img src="images/accredited.png" alt="accredited" class="accredited">
+                </div>
+            </div>
 
-    </body>
+
+        </div>
+
+        <div class="row justify-content-between">
+            <div class="col-md-12 text-center">
+
+                <p class="footer-texts">Copyright 1999-2016 LegalMatch. All rights reserved Legalmatch</p>
+                <p class="footer-texts">the LegalMatch logo, and the traderess are trademarks of LegalMatch. Patents
+                    Pending.</p>
+            </div>
+
+
+
+        </div>
+    </footer>
+
+    <div id="categoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn align-self-end">&times;</span>
+            <span id="selectedOption" class="hidden"></span>
+
+
+
+
+            <p><span class="input-number-modal">3</span> Which Family Law issues(s) apply to your case?</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="adoptions">
+                        <label class="form-check-label" for="adoptions">Adoptions</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="guardianship">
+                        <label class="form-check-label" for="guardianship">Guardianship</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="childCustody">
+                        <label class="form-check-label" for="childCustody">Child Custody and Visitation</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="paternity">
+                        <label class="form-check-label" for="paternity">Paternity</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="childSupport">
+                        <label class="form-check-label" for="childSupport">Child Support</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="separations">
+                        <label class="form-check-label" for="separations">Separations</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="divorce">
+                        <label class="form-check-label" for="divorce">Divorce</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="spousalSupport">
+                        <label class="form-check-label" for="spousalSupport">Spousal Support or Alimony</label>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center mt-5">
+                    <button class="custom-btn">Find a Lawyer now</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="reviewsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn-review align-self-end">&times;</span>
+            <span id="selectedOption" class="hidden"></span>
+
+
+
+
+            <p>Client Reviews</p>
+            <hr />
+
+            <div class="row">
+                <div class="col-md-12 mt-5 d-flex flex-column align-items-start">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Reviewer 1"
+                                class="reviewer-image mb-2">
+                        </div>
+                        <div class="col-md-9">
+                            <p>Brigada R.</p>
+                            <p>Dallas TX</p>
+                            <p>Family Law</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            Rating (29 users) <span>★★★★☆</span>
+                        </div>
+                        <hr />
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-6">
+                            <p>Overall</p>
+                            <p>Responded in a timely manner</p>
+                            <p>Answered questions clearly</p>
+                            <p>Understood needs</p>
+                            <p>Gave complete and clear information</p>
+                            <p>Knowledgeable in legal area</p>
+                            <p>Good value for money</p>
+                            <p>Would hire again</p>
+                            <p>Would recommend to friend</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p><span>★★★★☆</span></p>
+                            <p><span>★★★★☆</span></p>
+                            <p><span>★★★★☆</span></p>
+                            <p><span>★★★★☆</span></p>
+                            <p><span>★★★★☆</span></p>
+                            <p><span>★★★★☆</span></p>
+                            <p><span>★★★★☆</span></p>
+                            <p><span>★★★★☆</span></p>
+                            <p><span>★★★★☆</span></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>★★★★☆</span> by Dexter Marchal 06/10/2016
+
+                            <p>Deb did a great job. Got my bench warrant set aside.. was sure i was going to jail..
+                                phew. Judge seemed to respect her and I got what I </p>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+            <span class="close-btn-review align-self-end">CLOSE</span>
+        </div>
+
+        <script src="autosuggest.js"></script>
+        <script src="modal.js"></script>
+</body>
 
 </html>
