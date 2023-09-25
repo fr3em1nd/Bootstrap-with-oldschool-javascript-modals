@@ -18,6 +18,13 @@ body, html {
     font-weight: 700;
     color: #05296A;
 }
+.text-beside-logo-footer {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: #05296A;
+}
+
 
 .check-list {
     list-style-type: none;  
@@ -168,6 +175,12 @@ body, html {
 .formSubHeader{
     margin-top: 20px;
 }
+.formTextFooter{
+    margin-top: 20px;
+    color: white;
+
+}
+
 
 .reviews{
     margin-top: -80px;
@@ -276,3 +289,6 @@ body, html {
 #selectOption option:disabled {
     color: grey;
 }
+
+
+ 

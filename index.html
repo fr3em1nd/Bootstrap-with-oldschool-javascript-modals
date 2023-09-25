@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="container-fluid no-margin-body">
@@ -75,6 +75,7 @@
 
                             </select>
                         </div>
+                        <p class="formTextFooter">Can't find your category? <a href="#" id="noCategBtn">Click here.</a></p>
                     </form>
                 </div>
                 <div class="col-md-6 col-md-3 pl-sm-5 pr-sm-5 pr-5 reviews">
@@ -138,8 +139,8 @@
     <footer class="container-fluid text-white py-3">
         <div class="row justify-content-between">
             <div class="col-md-3">
-                <img src="images/md.svg" alt="Logo" class="logo">
-                <div class="text-beside-logo mt-2">Find the right lawyer now</div>
+                <img src="images/md.svg" width="200" alt="footer-logo" class="footer-logo">
+                <div class="text-beside-logo-footer mt-2">Find the right lawyer now</div>
             </div>
             <div class="col-md-3 text-center">
                 <p class="footer-texts-agreement">User Agreement &#8226; Privacy Policy &#8226; Site Map</p>
@@ -223,13 +224,68 @@
         </div>
     </div>
 
+
+    <div id="NoCategoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn-ctg align-self-end">&times;</span>
+            
+ 
+            <p> OTHER CATEGORIES</p>
+            <p> Choose the category that best fits your case</p>
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li>Abuse (Child, Domestic, Sexual)</li>
+                        <li>Loremipsum Dolorsitamet,</li>
+                        <li>Agencies & Administration</li>
+                        <li>Lonsectetur Scingelit (Baseererki, Mereit)</li>
+                        <li>Miam Euvelit</li>
+                        <li>Automobile (DUI, Crimes, Speeding )</li>
+                        <li>Automobiles ( Accidents, Insurance)</li>
+                        <li>Mempor Auctor (Estiarma, Toeruslej)</li>
+                        <li>Banking ( Business, Consumer )</li>
+                        <li>Nisultricies Dictumest.</li>
+                        <li>Bars & Restaurants</li>
+                        <li>Ntfring Sodalelit (Aeeticl Restoustoust)</li>
+                        <li>Business Formation & Dissolution</li>
+                    </ul>
+                </div>
+                
+                <!-- Second Column -->
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li>Ntvarius Lectus & Congue</li>
+                        <li>Pellentesque</li>
+                        <li>Children (Adoption, Custody, Support)</li>
+                        <li>Class Actions (Bad Drugs, Products)</li>
+                        <li>Rigula Aliquamattis (Nestusotu. Wewreist)</li>
+                        <li>Commercia law and Contracts</li>
+                        <li>Set Tiaulempor</li>
+                        <li>Commercial Real Estate</li>
+                        <li>Sehicula Sedsitamet</li>
+                        <li>Constitutional Law</li>
+                        <li>Seaue Nesturre</li>
+                        <li>Construction (Disoutes. Liens)</li>
+                        <li>Tollis Gaurissed</li>
+                        <li>Categories Item Here</li>
+                        <li>Tempor Auctor (Estiarma, Toeruslei)</li>
+                    </ul>
+                </div>
+            </div>
+      
+        </div>
+    </div>
+
+
+
+    
     <div id="reviewsModal" class="modal">
         <div class="modal-content">
             <span class="close-btn-review align-self-end">&times;</span>
             <span id="selectedOption" class="hidden"></span>
 
-
-
+ 
 
             <p>Client Reviews</p>
             <hr />
@@ -297,8 +353,8 @@
             <span class="close-btn-review align-self-end">CLOSE</span>
         </div>
 
-        <script src="autosuggest.js"></script>
-        <script src="modal.js"></script>
+        <script src="js/autosuggest.js"></script>
+        <script src="js/modal.js"></script>
 </body>
 
 </html>
