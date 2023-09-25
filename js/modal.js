@@ -6,7 +6,9 @@ var modalNoCategoryModal = document.getElementById('NoCategoryModal');
 var modalReviewsModal = document.getElementById('reviewsModal');
 var closeBtnCategory = document.querySelector('.close-btn');
 var closeBtnNoCategory = document.querySelector('.close-btn-ctg');
+
 var closeBtnReview = document.getElementsByClassName("close-btn-review");
+
 var selectedOptionDisplay = document.getElementById('selectedOption');
 
 var noCategBtn = document.getElementById('noCategBtn');
