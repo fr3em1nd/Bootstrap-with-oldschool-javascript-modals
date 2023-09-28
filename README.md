@@ -1,4 +1,4 @@
-# EXAM 1
+# Bootstrap with oldschool javascript modals
 
 technologies used:
 
